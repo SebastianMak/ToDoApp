@@ -1,0 +1,33 @@
+
+  .signin-button{
+    padding: 0 15px;
+    background-color: #2196f3;
+    border: none;
+    &:hover {
+      background-color: $color-purple
+    }
+  }
+  .register-button{
+    @extend.signin-button;
+  }
+  .btn.signin-button-footer{
+    text-transform: none;
+  }
+  .custom-error{
+    @include custom-message(-20px, #f44336, 13.5px);
+    display: $display-none
+  }
+  .custom-succes{
+    @include custom-message(-20px, #4caf50, 13.5px);
+    display: $display-none
+  }
+  .invalid~.validation-messages{
+    .custom-error {
+        display: block;
+    }
+  }
+  .valid~.validation-messages{
+    .custom-succes {
+        display: block;
+    }
+  }

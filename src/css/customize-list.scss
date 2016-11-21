@@ -1,0 +1,53 @@
+#notes {
+    .hide-div {
+        display: $display-none;
+    }
+
+    .change-buttons-div {
+        display: $display-none;
+    }
+
+    .playlist_add {
+        margin-top: 30px;
+    }
+
+    .delete-button {
+        height: 21px;
+        padding: 0;
+        background-color: $color-white;
+        color: $color-black;
+        box-shadow: none;
+
+        &:hover {
+            background: none;
+            box-shadow: none;
+            color: #f44336;
+        }
+
+        .delete-icon {
+            line-height: normal;
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .user-check-delete-icon {
+            @extend .delete-icon;
+        }
+    }
+
+    .user-check-delete {
+        @extend .delete-button;
+        margin-right: 15px;
+    }
+
+    .user-uncheck-delete {
+        @extend .delete-button;
+    }
+
+    .apply-overflow {
+        word-break: break-word;
+    }
+}
+.to-do-list-button{
+  @extend.signin-button;
+}

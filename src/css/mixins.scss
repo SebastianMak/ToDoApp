@@ -1,0 +1,9 @@
+@mixin set-size($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin custom-message($margin-top, $color, $font-size){
+  margin-top: $margin-top;
+  color : $color;
+  font-size : $font-size;
+}

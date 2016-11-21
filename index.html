@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="dist/style.css" media="screen" title="no title">
+    <link rel="stylesheet" href="vendor/materialize/css/materialize.css" media="screen" title="no title">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <nav id="nav">
+        <div class="nav-wrapper blue">
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li class="left"><button class="to-do-list-button">ToDoList
+              </button></li>
+                <li class="right"><button class="signin-button">Sign In
+                      <i class="material-icons left">person</i>
+                    </button>
+                </li>
+                <li class="right"><button class="register-button">Register
+                      <i class="material-icons left">person_outline</i>
+                  </button>
+                </li>
+            </ul>
+            <ul class="side-nav blue" id="mobile-demo">
+              <li><button class="to-do-list-button collapse-btn">ToDoList
+                <i class="material-icons left">playlist_add_check</i>
+              </button>
+              </li>
+                <li><button class="signin-button collapse-btn">Sign In
+                      <i class="material-icons left">person</i>
+                    </button>
+                </li>
+                <li><button class="register-button collapse-btn">Register
+                      <i class="material-icons left">person_outline</i>
+                  </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="view">
+      <div id="register" class="container valign-wrapper register-card row">
+        <form id="register-form" class="valign col s12 m8 l7 align-center">
+          <div class="card col s12">
+              <div class="card-title">
+                  <span class="card-title"><h3>Register</h3></span>
+              </div>
+              <div class="card-content row">
+                  <div class="input-field col s12">
+                      <input id="register_user_name" type="text" name="register_user_name" class="validate">
+                      <label for="register_user_name">Username</label>
+                      <div class="validation-messages">
+                        <div class="custom-error"> Error </div>
+                        <div class="custom-succes">Succes</div>
+                      </div>
+                  </div>
+                  <div class="input-field col s12">
+                      <input id="register_email" type="email" name="register_email"class="validate">
+                      <label for="register_email">Email</label>
+                      <div class="validation-messages">
+                        <div class="custom-error"> Error </div>
+                        <div class="custom-succes">Succes</div>
+                      </div>
+                  </div>
+                  <div class="input-field col s12">
+                      <input id="register_password" type="password" class="validate" name="register_password">
+                      <label for="register_password">Password</label>
+                      <div class="validation-messages">
+                        <div class="custom-error"> Error </div>
+                        <div class="custom-succes">Succes</div>
+                      </div>
+                  </div>
+                  <div class="input-field col s12">
+                      <input id="re-enter-password" type="password" class="validate" name="re-enter-password">
+                      <label for="re-eneter-password">Re-enter Password</label>
+                      <div class="validation-messages">
+                        <div class="custom-error"> Error </div>
+                        <div class="custom-succes">Succes</div>
+                      </div>
+                  </div>
+              </div>
+              <div class="card-action">
+                  <button class="btn waves-effect waves-light blue signup-button-footer" type="submit">Sign Up
+                  <i class="material-icons left">person_outline</i>
+                </button>
+              </div>
+          </div>
+        </form>
+      </div>
+
+      <div id="signIn" class="container valign-wrapper row signin-card">
+        <form id="singIn-form"class="valign col s12 m8 l7 align-center">
+          <div class="card col s12">
+              <div class="card-title">
+                  <span class="card-title"><h3>SignIn</h3></span>
+              </div>
+              <div class="card-content row">
+                  <div class="input-field col s12">
+                      <input id="signIn_username" type="text" class="validate" name="signIn_username">
+                      <label for="signIn_username">Username</label>
+                      <div class="validation-messages">
+                        <div class="custom-error"> Error </div>
+                        <div class="custom-succes">Succes</div>
+                      </div>
+                  </div>
+                  <div class="input-field col s12">
+                      <input id="signIn_password" type="password" class="validate" name="signIn_password">
+                      <label for="signIn_password">Password</label>
+                      <div class="validation-messages">
+                        <div class="custom-error"> Error </div>
+                        <div class="custom-succes">Succes</div>
+                      </div>
+                  </div>
+              </div>
+              <div class="card-action">
+                  <button class="btn waves-effect waves-light blue signin-button-footer" type="submit">Sign In
+                    <i class="material-icons left">person</i>
+                  </button>
+              </div>
+          </div>
+        </form>
+      </div>
+
+      <div id="notes" class="container to-do-list-container row">
+          <div class="card col s12">
+              <div class="card-title row rmv-margin">
+                  <span class="card-title center"><h1>To-do list</h1></span>
+              </div>
+              <div class="card-content row">
+
+                  <div class="center">
+                      <button class="btn-floating btn-large waves-effect waves-light add-input blue">
+                      <i class="material-icons btn-change">add</i></button>
+                      </button>
+                  </div>
+                  <div class="col s12 hide-div">
+                      <div class="input-field col l11 m10 s9">
+                          <i class="material-icons prefix">mode_edit</i>
+                          <textarea id="icon_prefix2" class="materialize-textarea empty-textarea"></textarea>
+                          <label for="icon_prefix2">Add to your list</label>
+                      </div>
+                      <div class="col l1 m2 s3 playlist_add">
+                          <button class="btn-floating waves-effect waves-light right blue add-to-list-btn" disabled>
+                              <i class="material-icons right">playlist_add</i></button>
+                      </div>
+                  </div>
+                  <div class="input-field col left s4">
+                      <select class="browser-default select-filter">
+                        <option value="" disabled selected>Filter by:</option>
+                        <option value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="pending">Pending</option>
+                      </select>
+                      <label></label>
+                  </div>
+
+                  <div class="to-do-list col s12">
+                  </div>
+              </div>
+              <div class="card-action row">
+                  <p class="hide rmv-container">
+                      <input id="test5" type="checkbox" class="remove-all-checkbox" />
+                      <label for="test5">Remove all</label>
+                  </p>
+                  <button class="btn waves-effect waves-light red hide remove-items">Remove
+                    <i class="material-icons"></i>
+                  </button>
+                  <button class="btn waves-effect waves-light right col l1 m1 s2 red delete-btn">
+                  <i class="material-icons">delete_forever</i>
+                </button>
+              </div>
+          </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="overlay hide valign-wrapper">
+        <div class="preloader valign center">
+            <div class="preloader-wrapper big set-size">
+                <div class="spinner-layer spinner-blue-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="dist/findem.js"></script>
+<script type="text/javascript" src="vendor/materialize/js/materialize.min.js"></script>
+</html>
