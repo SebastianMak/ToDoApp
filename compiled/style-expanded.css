@@ -1,0 +1,134 @@
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(../fonts/materialicon.woff2) format("woff2");
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+#notes .hide-div {
+  display: none;
+}
+#notes .change-buttons-div {
+  display: none;
+}
+#notes .playlist_add {
+  margin-top: 30px;
+}
+#notes .delete-button, #notes .user-check-delete, #notes .user-uncheck-delete {
+  height: 21px;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: none;
+}
+#notes .delete-button:hover, #notes .user-check-delete:hover, #notes .user-uncheck-delete:hover {
+  background: none;
+  box-shadow: none;
+  color: #f44336;
+}
+#notes .delete-button .delete-icon, #notes .user-check-delete .delete-icon, #notes .user-uncheck-delete .delete-icon, #notes .delete-button .user-check-delete-icon, #notes .user-check-delete .user-check-delete-icon, #notes .user-uncheck-delete .user-check-delete-icon {
+  line-height: normal;
+  margin: 0;
+  font-size: 22px;
+}
+#notes .user-check-delete {
+  margin-right: 15px;
+}
+#notes .apply-overflow {
+  word-break: break-word;
+}
+
+.signin-button, .to-do-list-button, .register-button {
+  padding: 0 15px;
+  background-color: #2196f3;
+  border: none;
+  transition: all 1s ease;
+}
+.signin-button:hover, .to-do-list-button:hover, .register-button:hover {
+  background-color: #0d47a1;
+}
+
+.btn.signin-button-footer {
+  text-transform: none;
+}
+
+.custom-error {
+  margin-top: -20px;
+  color: #f44336;
+  font-size: 13.5px;
+  display: none;
+}
+
+.custom-succes {
+  margin-top: -20px;
+  color: #4caf50;
+  font-size: 13.5px;
+  display: none;
+}
+
+.invalid ~ .validation-messages .custom-error {
+  display: block;
+}
+
+.valid ~ .validation-messages .custom-succes {
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.preloader {
+  width: 100%;
+}
+
+.preloader-wrapper.big.set-size {
+  width: 200px;
+  height: 200px;
+}
+
+#view > :not(.active-view) {
+  display: none;
+}
+
+.align-center {
+  margin: 0 auto;
+}
+
+.collapse-btn {
+  width: 100%;
+  height: 50px;
+  text-align: left;
+}
+.collapse-btn .material-icons {
+  line-height: inherit;
+}
+
+.hide-on-med-and-down {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style-expanded.css.map */
