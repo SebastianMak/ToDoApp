@@ -3,13 +3,15 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     browserify:{
       build: {
-        src: 'src/js/main.js',
+        src: 'src/**/*.js',
         dest: 'dist/findem.js'
       }
     },
     uglify:{
-      files:{
-        'dist/findem.js': ['src/js/main.js']
+      my_target: {
+        files: {
+          'dist/findem.min.js': 'dist/findem.js'
+        }
       }
     },
     sass: {
